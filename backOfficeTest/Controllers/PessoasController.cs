@@ -1,3 +1,4 @@
+using BackOffice.Entity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,11 +11,11 @@ namespace WebAPI.Controllers.backOffice
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class BackOfficeContext : ControllerBase
+    public class PessoasController : ControllerBase
     {
-        private readonly Contexto _contexto;
+        private readonly BackOfficeContext _contexto;
 
-        public BackOfficeContext(Contexto contexto)
+        public PessoasController(BackOfficeContext contexto)
         {
             _contexto = contexto;
         }
@@ -74,7 +75,7 @@ namespace WebAPI.Controllers.backOffice
                 return Conflict();
             }
 
-            pessoaExistente.TipoPessoa = pessoaAtualizada.TipoPessoa;
+            //pessoaExistente.TipoPessoa = pessoaAtualizada.TipoPessoa;
             pessoaExistente.Documento = pessoaAtualizada.Documento;
             pessoaExistente.Nome = pessoaAtualizada.Nome;
             pessoaExistente.Apelido = pessoaAtualizada.Apelido;

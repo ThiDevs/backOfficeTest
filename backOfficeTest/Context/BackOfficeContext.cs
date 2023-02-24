@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using WebAPI.Controllers.Models;
 
-namespace BackOffice.Models
+namespace BackOffice.Entity
 {
     public class BackOfficeContext : DbContext
     {
